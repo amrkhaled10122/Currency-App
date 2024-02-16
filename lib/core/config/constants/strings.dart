@@ -5,6 +5,8 @@ abstract class AppStrings {
   static const currencyAPi = '$apiHost/currencies?apikey=$apiKey';
   static String exchangeAPi(String baseCurrency, String currencies) =>
       '$apiHost/latest?apikey=$apiKey&currencies=$currencies&base_currency=$baseCurrency';
+  static String historyAPi(String baseCurrency, String currencies, String date) =>
+      '$apiHost/historical?apikey=$apiKey&currencies=$currencies&base_currency=$baseCurrency&date=$date';
   //Shared Prefrences Strings
   static const introPageSeen = "intro_page_seen";
   static const storedLanguageCode = 'language_code';
