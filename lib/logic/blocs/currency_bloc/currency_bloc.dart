@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
 import '../../../data/helpers/dialog_helper.dart';
 import '../../../data/models/view_model/currency_model/currency_history_model.dart';
 import '../../../data/extensions/math_extensions.dart';
@@ -75,7 +76,7 @@ class CurrencyBloc extends Bloc<CurrencyEvent, CurrencyState> {
 
       cachedCurrenciesData.forEach(currencies.add);
     } else {
-      final response = await _serverRepository.getCurrencies(currentDate);
+      final response = await _serverRepository.getCurrencies();
       await _hiveService.storeCachedCurrenciesWithDate(currentDate, response);
       currencies.addAll(response);
     }

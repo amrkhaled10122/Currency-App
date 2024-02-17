@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// This abstract class contains static constants representing a color palette used in the application.
 abstract class AppPalette {
   static const whiteColor = Colors.white;
   static const greyColor = Colors.grey;

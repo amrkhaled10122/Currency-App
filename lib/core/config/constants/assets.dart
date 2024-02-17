@@ -1,3 +1,4 @@
+/// This abstract class contains static constants representing image and icon paths used in the application.
 abstract class AppImages {
   static const introSliderFirstImage = 'assets/images/intro/slider_first.svg';
   static const introSliderSecondImage = 'assets/images/intro/slider_second.svg';
@@ -11,6 +12,7 @@ abstract class AppImages {
   static const noDataIcon = 'assets/icons/no_data_icon.svg';
 }
 
+/// This function generates the URL for a material flag icon based on the provided country code.
 String getMaterialUrl(String? code) {
   return 'assets/icons/flags/${code?.toLowerCase()}_flag.png';
 }
